@@ -1,6 +1,9 @@
 function calcular() {
     // Solicita a entrada do usuário e converte para número
-    let producao = parseFloat(document.getElementById('iproducao').value.replace(',', '.'));
+    let producaoInput = document.getElementById('iproducao').value;
+
+    // Remove os pontos de milhar e substitui a vírgula decimal por um ponto
+    let producao = parseFloat(producaoInput.replace(/\./g, '').replace(',', '.'));
 
     // Verifica se a produção é um número válido
     if (isNaN(producao) || producao < 0) {
@@ -16,13 +19,13 @@ function calcular() {
 
     // Verifica a produção e calcula a comissão
     if (producao <= 3000000.00) {
-        comissao = producao * 0.005;  // 0.50% para produção até R$ 3.000.000,00
+        comissao = producao * 0.005/100;  // 0,50% para produção até R$ 3.000.000,00
     } else if (producao >= 3000000.01 && producao <= 4500000.00) {
-        comissao = producao * 0.00667;  // 0.667% para produção entre R$ 3.000.000,01 e R$ 4.500.000,00
+        comissao = producao * 0.00667/100;  // 0,667% para produção entre R$ 3.000.000,01 e R$ 4.500.000,00
     } else if (producao >= 4500000.01 && producao <= 5500000.00) {
-        comissao = producao * 0.01091;  // 1.091% para produção entre R$ 4.500.000,01 e R$ 5.500.000,00
+        comissao = producao * 0.01091/100;  // 1,091% para produção entre R$ 4.500.000,01 e R$ 5.500.000,00
     } else if (producao >= 5500000.01) {
-        comissao = producao * 0.01818;  // 1.818% para produção acima de R$ 5.500.000,01
+        comissao = producao * 0.01818/100;  // 1,818% para produção acima de R$ 5.500.000,01
     }
 
     // Exibe o resultado na tela
