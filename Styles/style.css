@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+*{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bolder;
+}
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#explicacao{
+  margin: 10px;
+  font-size: 1em;
+}
+main{
+    padding: 20px;
+}
+div{
+    margin: 20px;
+    padding: 30px;
+}
+#iproducao{
+    background-color: whitesmoke;
+    opacity: 50%;
+    color: black;
+    padding: 5px;
+    border-radius: 5%;
+    margin: 10px;
+}
+#ibotaocalculo{
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+}
+#ibotaocalculo:hover{
+    background-color: green;
+    color: white;
+}
+footer{
+    margin-top: 30px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
